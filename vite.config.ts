@@ -7,11 +7,11 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: './', // Bien pour GitHub Pages
+  // Pour GitHub Pages avec sous-dossier /PainPatisserie/
+  base: '/PainPatisserie/', 
   build: {
     // Assurez-vous que les assets sont correctement liés
     assetsDir: 'assets',
-    // Génération du fichier 404.html pour la redirection SPA
     rollupOptions: {
       output: {
         manualChunks: {
