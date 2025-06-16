@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pain Pâtisserie | Redirection</title>
+  <script type="text/javascript">
+    // Prend l'URL actuelle qui a échoué et la stocke dans sessionStorage
+    sessionStorage.redirect = location.href;
+    // Redirige vers la page d'accueil
+    location.replace(location.origin);
+  </script>
+</head>
+<body>
+  <h1>Redirection...</h1>
+  <p>Si vous n'êtes pas redirigé automatiquement, <a href="/">cliquez ici</a>.</p>
+</body>
+</html>
