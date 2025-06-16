@@ -4,14 +4,23 @@
   <meta charset="utf-8">
   <title>Pain Pâtisserie | Redirection</title>
   <script type="text/javascript">
-    // Prend l'URL actuelle qui a échoué et la stocke dans sessionStorage
-    sessionStorage.redirect = location.href;
-    // Redirige vers la page d'accueil
-    location.replace(location.origin);
+    // Single Page Apps pour GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    var pathSegmentsToKeep = 1; // Ajuster pour conserver /PainPatisserie/
+
+    var l = window.location;
+    var redirectPath = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/') +
+      (l.search ? '&' + l.search.slice(1) : '') +
+      l.hash;
+
+    sessionStorage.redirect = l.origin + redirectPath;
+    window.location.replace(redirectPath);
   </script>
 </head>
 <body>
   <h1>Redirection...</h1>
-  <p>Si vous n'êtes pas redirigé automatiquement, <a href="/">cliquez ici</a>.</p>
+  <p>Si vous n'êtes pas redirigé automatiquement, <a href="/PainPatisserie/">cliquez ici</a>.</p>
 </body>
 </html>
