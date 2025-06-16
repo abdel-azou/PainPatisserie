@@ -8,7 +8,7 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   // Pour GitHub Pages avec sous-dossier /PainPatisserie/
-  base: '/PainPatisserie/', 
+  base: '/PainPatisserie/PainPatisserie/', 
   build: {
     // Assurez-vous que les assets sont correctement liés
     assetsDir: 'assets',
